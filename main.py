@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        MainWindow.showFullScreen()
+        MainWindow.showMaximized()
         MainWindow.setWindowFlag(Qt.FramelessWindowHint)
 
         self.retranslateUi(MainWindow)
