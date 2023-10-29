@@ -82,8 +82,15 @@ border-top-left-radius: 50px;</string>
       <height>430</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgba(0, 0, 0, 40);
+background-image: url(:/images/resources/images/background.jpg);
 border-top-left-radius: 50px;</string>
     </property>
     <property name="text">

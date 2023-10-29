@@ -11,11 +11,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 
-
 class Ui_Login(object):
     def setupUi(self, Login):
         Login.setObjectName("Login")
-        Login.resize(1024, 600)
+        Login.resize(625, 565)
         self.widget = QtWidgets.QWidget(Login)
         self.widget.setGeometry(QtCore.QRect(30, 30, 550, 500))
         self.widget.setStyleSheet("QPushButton#btnLogin{\n"
@@ -59,7 +58,13 @@ class Ui_Login(object):
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(40, 30, 280, 430))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy)
         self.label_2.setStyleSheet("background-color:rgba(0, 0, 0, 40);\n"
+"background-image: url(:/images/resources/images/background.jpg);\n"
 "border-top-left-radius: 50px;")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
@@ -149,6 +154,7 @@ class Ui_Login(object):
         self.label_7.setText(_translate("Login", "Irrigation"))
         self.label_8.setText(_translate("Login", "Schedule"))
 import res
+
 
 if __name__ == "__main__":
     import sys
