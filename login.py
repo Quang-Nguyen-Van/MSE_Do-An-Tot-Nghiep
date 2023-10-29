@@ -145,7 +145,7 @@ class Ui_Login(object):
         self.label_8.setObjectName("label_8")
         # Login.showMaximized()
         Login.showFullScreen()
-        Login.setWindowFlag(Qt.FramelessWindowHint)
+        # Login.setWindowFlag(Qt.FramelessWindowHint)
 
         self.retranslateUi(Login)
         QtCore.QMetaObject.connectSlotsByName(Login)
