@@ -67,62 +67,7 @@ class MAIN_HANDLE(Ui_MainWindow):
             
             button.clicked.connect(lambda: self.viewDetails(schedule['id']))
             self.tblSchedule.setCellWidget(row, 4, button)            
-              
-                            
-    # def loadSchedules(self):
-        
-    #     header = {"accept": "*/*", "Content-Type": "application/json", "Authorization": f"Bearer {self.accessToken}"}
-
-    #     response = requests.get("https://api.mhzppe.com/schedules", headers=header)
-    #     # print(response.status_code)
-    #     if response.status_code == 200:
-    #         self.list_schedules = response.json()
-
-    #         # print(self.list_schedules)
-    #         nb_schedule = len(self.list_schedules)
-    #         self.tblSchedule.setRowCount(nb_schedule)
-    #         for row, schedule in enumerate(self.list_schedules):
-    #             item = QtWidgets.QTableWidgetItem(str(schedule['id']))
-
-    #             item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-    #             self.tblSchedule.setItem(row, 0, item)
-    #             item.setTextAlignment(Qt.AlignHCenter)
-    #             item = QtWidgets.QTableWidgetItem(str(schedule['title']))
-
-    #             item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-    #             self.tblSchedule.setItem(row, 1, item)
-                
-    #             item = QtWidgets.QTableWidgetItem(str(schedule['description']))
-    #             item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-    #             self.tblSchedule.setItem(row, 2, item)
-                
-    #             item = QtWidgets.QTableWidgetItem(str(schedule['isActive']))
-    #             item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-    #             item.setTextAlignment(Qt.AlignHCenter)
-    #             self.tblSchedule.setItem(row, 3, item)
-                
-    #             button = QtWidgets.QPushButton("Details")                
-    #             button.setMaximumSize(QtCore.QSize(80, 30))
-    #             button.setStyleSheet("QPushButton{\n"
-    #                                         "    background-color:rgb(0, 209, 255);\n"
-    #                                         "    border: none;\n"
-    #                                         "    border-radius: 10px;\n"
-    #                                         "    color: white;\n"
-    #                                         "    font-weight: bold;\n"
-    #                                         "}\n"
-    #                                         "\n"
-    #                                         "QPushButton::hover{\n"
-    #                                         "    background-color:rgb(0, 170, 255);\n"
-    #                                         "    border-radius: 10px\n"
-    #                                         "}")
-                
-    #             button.clicked.connect(lambda: self.viewDetails(schedule['id']))
-    #             self.tblSchedule.setCellWidget(row, 4, button)
-
-            
-    #     elif response.status_code == 403:
-    #         self.showMessageInfo("Incorrect Username or Password!")    
-            
+          
     
     def viewDetails(self, schedule_id):
         button = self.tblSchedule.sender()
@@ -166,21 +111,6 @@ class MAIN_HANDLE(Ui_MainWindow):
                 self.scheduleHandle.tblDays.setCellWidget(row, 2, button)
             
             self.scheduleUI.show()    
-            # # Get the row of the button clicked
-            # row = self.tblSchedule.indexAt(button.pos()).row()
-
-            # # Retrieve data for the selected row
-            # id_item = self.tblSchedule.item(row, 0)
-            # first_name_item = self.tblSchedule.item(row, 1)
-            # last_name_item = self.tblSchedule.item(row, 2)
-
-            # if id_item and first_name_item and last_name_item:
-            #     id_value = id_item.text()
-            #     first_name = first_name_item.text()
-            #     last_name = last_name_item.text()
-
-            #     # Implement your logic to view details here
-            #     print(f"View details for ID: {id_value}, Name: {first_name} {last_name}")
     
     def dayDetails(self, days):     
         button = self.scheduleHandle.tblDays.sender()
@@ -222,14 +152,6 @@ class MAIN_HANDLE(Ui_MainWindow):
                 self.scheduleHandle.tblSlot.setItem(row, 3, item)
                 item.setTextAlignment(Qt.AlignHCenter)
                 
-                # layout = QtWidgets.QHBoxLayout()
-
-                # saveButtonItem = QtWidgets.QPushButton('Save')
-                # editButtonItem = QtWidgets.QPushButton('Edit')
-                
-
-                # self.tableWidget.setCellWidget(0, 4, cellWidget)
-                
                 button = QtWidgets.QPushButton("Play")                
                 button.setMaximumSize(QtCore.QSize(70, 25))
                 button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -247,34 +169,7 @@ class MAIN_HANDLE(Ui_MainWindow):
                                             "}")
                 
                 button.clicked.connect(lambda: self.changeSlotStatus())
-                self.scheduleHandle.tblSlot.setCellWidget(row, 4, button)
-                
-                # canCelbutton = QtWidgets.QPushButton("Cancel")                
-                # canCelbutton.setMaximumSize(QtCore.QSize(70, 25))
-                # canCelbutton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-                # canCelbutton.setStyleSheet("QPushButton{\n"
-                #                             "    background-color:rgb(0, 209, 255);\n"
-                #                             "    border: none;\n"
-                #                             "    border-radius: 7px;\n"
-                #                             "    color: white;\n"
-                #                             "    font-weight: bold;\n"
-                #                             "}\n"
-                #                             "\n"
-                #                             "QPushButton::hover{\n"
-                #                             "    background-color:rgb(0, 170, 255);\n"
-                #                             "    border-radius: 7px;\n"
-                #                             "}")
-                
-                # canCelbutton.clicked.connect(lambda: self.changeSlotStatus())
-                
-                # layout.addWidget(button)
-                # layout.addWidget(canCelbutton)
-
-                # cellWidget = QtWidgets.QWidget()
-                # cellWidget.setLayout(layout)
-                
-                # self.scheduleHandle.tblSlot.setCellWidget(row, 4, cellWidget)
-                # self.scheduleHandle.tblSlot.setCellWidget(row, 4, canCelbutton)
+                self.scheduleHandle.tblSlot.setCellWidget(row, 4, button)                                
                 
     def changeSlotStatus(self):
         # Get the row of the button clicked
@@ -294,11 +189,3 @@ class MAIN_HANDLE(Ui_MainWindow):
             elif resp['status'] == 2:
                 statusStr = "Done"
             self.scheduleHandle.tblSlot.item(row, 3).setText(statusStr)
-
-        # if id_item and first_name_item and last_name_item:
-        #     id_value = id_item.text()
-        #     first_name = first_name_item.text()
-        #     last_name = last_name_item.text()
-
-        #     # Implement your logic to view details here
-        #     print(f"View details for ID: {id_value}, Name: {first_name} {last_name}")
