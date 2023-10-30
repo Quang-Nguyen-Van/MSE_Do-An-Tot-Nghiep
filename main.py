@@ -26,6 +26,9 @@ class Ui_MainWindow(object):
         self.frm_header = QtWidgets.QFrame(self.centralwidget)
         self.frm_header.setMinimumSize(QtCore.QSize(800, 100))
         self.frm_header.setMaximumSize(QtCore.QSize(1024, 100))
+        self.frm_header.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frm_header.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frm_header.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frm_header.setLineWidth(0)
@@ -36,6 +39,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_4 = QtWidgets.QFrame(self.frm_header)
         self.frame_4.setMinimumSize(QtCore.QSize(280, 50))
+        self.frame_4.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setLineWidth(0)
@@ -52,6 +58,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.frame_4, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
         self.frame_5 = QtWidgets.QFrame(self.frm_header)
         self.frame_5.setMinimumSize(QtCore.QSize(100, 30))
+        self.frame_5.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setLineWidth(0)
@@ -64,6 +73,9 @@ class Ui_MainWindow(object):
         self.frm_table = QtWidgets.QFrame(self.centralwidget)
         self.frm_table.setMinimumSize(QtCore.QSize(800, 150))
         self.frm_table.setMaximumSize(QtCore.QSize(1024, 300))
+        self.frm_table.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frm_table.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frm_table.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frm_table.setLineWidth(0)
@@ -160,6 +172,9 @@ class Ui_MainWindow(object):
         self.frm_button = QtWidgets.QFrame(self.centralwidget)
         self.frm_button.setMinimumSize(QtCore.QSize(800, 100))
         self.frm_button.setMaximumSize(QtCore.QSize(1024, 100))
+        self.frm_button.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frm_button.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frm_button.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frm_button.setLineWidth(0)
@@ -195,7 +210,6 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         MainWindow.showFullScreen()
         # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
