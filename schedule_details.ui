@@ -56,19 +56,10 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="spacing">
-        <number>0</number>
-       </property>
        <property name="leftMargin">
         <number>0</number>
        </property>
        <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item alignment="Qt::AlignTop">
@@ -121,14 +112,14 @@
         <widget class="QGroupBox" name="groupBox">
          <property name="minimumSize">
           <size>
-           <width>790</width>
-           <height>125</height>
+           <width>770</width>
+           <height>120</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>1020</width>
-           <height>150</height>
+           <width>1015</width>
+           <height>125</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -147,11 +138,14 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>781</width>
+            <width>751</width>
             <height>101</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame_2">
              <property name="styleSheet">
@@ -234,6 +228,18 @@
            </item>
            <item>
             <widget class="QFrame" name="frame">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">QFrame{
 	border: none;
@@ -320,7 +326,7 @@
         <widget class="QGroupBox" name="groupBox_2">
          <property name="minimumSize">
           <size>
-           <width>790</width>
+           <width>770</width>
            <height>170</height>
           </size>
          </property>
@@ -343,7 +349,7 @@
            <rect>
             <x>10</x>
             <y>20</y>
-            <width>311</width>
+            <width>241</width>
             <height>141</height>
            </rect>
           </property>
@@ -361,9 +367,9 @@
           <widget class="QTableWidget" name="tblDays">
            <property name="geometry">
             <rect>
-             <x>50</x>
+             <x>10</x>
              <y>10</y>
-             <width>201</width>
+             <width>221</width>
              <height>121</height>
             </rect>
            </property>
@@ -437,9 +443,9 @@
          <widget class="QFrame" name="frmSlots">
           <property name="geometry">
            <rect>
-            <x>330</x>
+            <x>300</x>
             <y>20</y>
-            <width>481</width>
+            <width>441</width>
             <height>141</height>
            </rect>
           </property>
@@ -457,9 +463,9 @@
           <widget class="QTableWidget" name="tblSlot">
            <property name="geometry">
             <rect>
-             <x>10</x>
+             <x>-10</x>
              <y>0</y>
-             <width>431</width>
+             <width>451</width>
              <height>131</height>
             </rect>
            </property>

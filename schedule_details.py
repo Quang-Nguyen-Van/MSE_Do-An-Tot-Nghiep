@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -32,8 +32,7 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frame_4)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setContentsMargins(0, 0, -1, -1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(self.frame_4)
         font = QtGui.QFont()
@@ -57,8 +56,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_3)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.groupBox = QtWidgets.QGroupBox(self.frame_3)
-        self.groupBox.setMinimumSize(QtCore.QSize(790, 125))
-        self.groupBox.setMaximumSize(QtCore.QSize(1020, 150))
+        self.groupBox.setMinimumSize(QtCore.QSize(770, 120))
+        self.groupBox.setMaximumSize(QtCore.QSize(1015, 125))
         self.groupBox.setStyleSheet("QGroupBox {\n"
 "    border: 1px solid;\n"
 "}")
@@ -66,10 +65,11 @@ class Ui_MainWindow(object):
         self.groupBox.setFlat(False)
         self.groupBox.setObjectName("groupBox")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.groupBox)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 781, 101))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 751, 101))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_2 = QtWidgets.QFrame(self.horizontalLayoutWidget)
         self.frame_2.setStyleSheet("QFrame{\n"
@@ -104,6 +104,8 @@ class Ui_MainWindow(object):
         self.chbxActive.setObjectName("chbxActive")
         self.horizontalLayout.addWidget(self.frame_2)
         self.frame = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 100))
         self.frame.setStyleSheet("QFrame{\n"
 "    border: none;\n"
 "}")
@@ -138,7 +140,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_5)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.groupBox_2 = QtWidgets.QGroupBox(self.frame_5)
-        self.groupBox_2.setMinimumSize(QtCore.QSize(790, 170))
+        self.groupBox_2.setMinimumSize(QtCore.QSize(770, 170))
         self.groupBox_2.setMaximumSize(QtCore.QSize(1020, 170))
         self.groupBox_2.setStyleSheet("QGroupBox {\n"
 "    border: 1px solid;\n"
@@ -146,7 +148,7 @@ class Ui_MainWindow(object):
         self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.frmDays = QtWidgets.QFrame(self.groupBox_2)
-        self.frmDays.setGeometry(QtCore.QRect(10, 20, 311, 141))
+        self.frmDays.setGeometry(QtCore.QRect(10, 20, 241, 141))
         self.frmDays.setStyleSheet("QFrame{\n"
 "    border: none;\n"
 "}")
@@ -154,7 +156,7 @@ class Ui_MainWindow(object):
         self.frmDays.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmDays.setObjectName("frmDays")
         self.tblDays = QtWidgets.QTableWidget(self.frmDays)
-        self.tblDays.setGeometry(QtCore.QRect(50, 10, 201, 121))
+        self.tblDays.setGeometry(QtCore.QRect(10, 10, 221, 121))
         self.tblDays.setStyleSheet("QTableWidget {\n"
 "    border: 1px solid;\n"
 "}")
@@ -188,7 +190,7 @@ class Ui_MainWindow(object):
         self.tblDays.horizontalHeader().setCascadingSectionResizes(True)
         self.tblDays.horizontalHeader().setDefaultSectionSize(65)
         self.frmSlots = QtWidgets.QFrame(self.groupBox_2)
-        self.frmSlots.setGeometry(QtCore.QRect(330, 20, 481, 141))
+        self.frmSlots.setGeometry(QtCore.QRect(300, 20, 441, 141))
         self.frmSlots.setStyleSheet("QFrame{\n"
 "    border: none;\n"
 "}")
@@ -196,7 +198,7 @@ class Ui_MainWindow(object):
         self.frmSlots.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmSlots.setObjectName("frmSlots")
         self.tblSlot = QtWidgets.QTableWidget(self.frmSlots)
-        self.tblSlot.setGeometry(QtCore.QRect(10, 0, 431, 131))
+        self.tblSlot.setGeometry(QtCore.QRect(-10, 0, 451, 131))
         self.tblSlot.setStyleSheet("QTableWidget {\n"
 "    border: 1px solid;\n"
 "}")
