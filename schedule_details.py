@@ -55,6 +55,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.groupBox = QtWidgets.QGroupBox(self.frame_3)
         self.groupBox.setMinimumSize(QtCore.QSize(800, 130))
+        self.groupBox.setStyleSheet("QGroupBox {\n"
+"    border: 1px solid;\n"
+"}")
         self.groupBox.setTitle("")
         self.groupBox.setFlat(False)
         self.groupBox.setObjectName("groupBox")
@@ -133,6 +136,9 @@ class Ui_MainWindow(object):
         self.groupBox_2 = QtWidgets.QGroupBox(self.frame_5)
         self.groupBox_2.setMinimumSize(QtCore.QSize(800, 170))
         self.groupBox_2.setMaximumSize(QtCore.QSize(1024, 170))
+        self.groupBox_2.setStyleSheet("QGroupBox {\n"
+"    border: 1px solid;\n"
+"}")
         self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.frmDays = QtWidgets.QFrame(self.groupBox_2)
@@ -144,7 +150,10 @@ class Ui_MainWindow(object):
         self.frmDays.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmDays.setObjectName("frmDays")
         self.tblDays = QtWidgets.QTableWidget(self.frmDays)
-        self.tblDays.setGeometry(QtCore.QRect(10, 10, 291, 121))
+        self.tblDays.setGeometry(QtCore.QRect(50, 10, 201, 121))
+        self.tblDays.setStyleSheet("QTableWidget {\n"
+"    border: 1px solid;\n"
+"}")
         self.tblDays.setAlternatingRowColors(True)
         self.tblDays.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tblDays.setShowGrid(False)
@@ -183,7 +192,10 @@ class Ui_MainWindow(object):
         self.frmSlots.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmSlots.setObjectName("frmSlots")
         self.tblSlot = QtWidgets.QTableWidget(self.frmSlots)
-        self.tblSlot.setGeometry(QtCore.QRect(10, 0, 451, 131))
+        self.tblSlot.setGeometry(QtCore.QRect(10, 0, 431, 131))
+        self.tblSlot.setStyleSheet("QTableWidget {\n"
+"    border: 1px solid;\n"
+"}")
         self.tblSlot.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.tblSlot.setDragEnabled(True)
         self.tblSlot.setDragDropMode(QtWidgets.QAbstractItemView.DragDrop)
@@ -274,7 +286,6 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         MainWindow.showFullScreen()
         # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

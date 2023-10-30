@@ -104,6 +104,11 @@
            <height>130</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	border: 1px solid;
+}</string>
+         </property>
          <property name="title">
           <string/>
          </property>
@@ -298,6 +303,11 @@
            <height>170</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	border: 1px solid;
+}</string>
+         </property>
          <property name="title">
           <string/>
          </property>
@@ -324,11 +334,16 @@
           <widget class="QTableWidget" name="tblDays">
            <property name="geometry">
             <rect>
-             <x>10</x>
+             <x>50</x>
              <y>10</y>
-             <width>291</width>
+             <width>201</width>
              <height>121</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+	border: 1px solid;
+}</string>
            </property>
            <property name="alternatingRowColors">
             <bool>true</bool>
@@ -417,9 +432,14 @@
             <rect>
              <x>10</x>
              <y>0</y>
-             <width>451</width>
+             <width>431</width>
              <height>131</height>
             </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+	border: 1px solid;
+}</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
