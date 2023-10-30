@@ -78,7 +78,8 @@ class Ui_MainWindow(object):
         self.frame_5.setLineWidth(0)
         self.frame_5.setObjectName("frame_5")
         self.lbUser = QtWidgets.QLabel(self.frame_5)
-        self.lbUser.setGeometry(QtCore.QRect(10, 10, 64, 16))
+        self.lbUser.setGeometry(QtCore.QRect(10, 10, 91, 16))
+        self.lbUser.setText("")
         self.lbUser.setObjectName("lbUser")
         self.horizontalLayout.addWidget(self.frame_5, 0, QtCore.Qt.AlignTop)
         self.verticalLayout_2.addWidget(self.frm_header)
@@ -222,6 +223,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         MainWindow.showFullScreen()
         # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -229,7 +231,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "IRRIGATION SYSTEM"))
-        self.lbUser.setText(_translate("MainWindow", "User Account"))
         item = self.tblSchedule.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
         item = self.tblSchedule.horizontalHeaderItem(1)

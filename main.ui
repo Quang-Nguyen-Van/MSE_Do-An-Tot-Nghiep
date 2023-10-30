@@ -171,12 +171,12 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>64</width>
+            <width>91</width>
             <height>16</height>
            </rect>
           </property>
           <property name="text">
-           <string>User Account</string>
+           <string/>
           </property>
          </widget>
         </widget>

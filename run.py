@@ -39,6 +39,7 @@ class UI():
         self.mainHandle.accessToken = self.accessToken
 
         if isLogedin:
+            self.mainHandle.lbUser.setText(username)
             self.loadMainForm(1)            
 
        
