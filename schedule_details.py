@@ -11,16 +11,29 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.ApplicationModal)
-        MainWindow.resize(800, 480)
+        # MainWindow.resize(1024, 600)
+        MainWindow.setMinimumSize(QtCore.QSize(800, 480))
+        MainWindow.setMaximumSize(QtCore.QSize(1024, 800))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(330, 0, 241, 41))
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.frame_4 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_4.setMinimumSize(QtCore.QSize(800, 40))
+        self.frame_4.setMaximumSize(QtCore.QSize(1024, 40))
+        self.frame_4.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.frame_4)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(self.frame_4)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -28,39 +41,33 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.btnBack = QtWidgets.QPushButton(self.centralwidget)
-        self.btnBack.setGeometry(QtCore.QRect(780, 530, 81, 41))
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btnBack.setFont(font)
-        self.btnBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnBack.setStyleSheet("QPushButton{\n"
-"    background-color:rgb(0, 209, 255);\n"
+        self.verticalLayout.addWidget(self.label, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.frame_4)
+        self.frame_3 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_3.setMinimumSize(QtCore.QSize(800, 130))
+        self.frame_3.setStyleSheet("QFrame{\n"
 "    border: none;\n"
-"    border-radius: 10px;\n"
-"    color: white;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QPushButton::hover{\n"
-"    background-color:rgb(0, 170, 255);\n"
-"    border-radius: 10px\n"
 "}")
-        self.btnBack.setObjectName("btnBack")
-        self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(110, 60, 671, 111))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.groupBox = QtWidgets.QGroupBox(self.frame_3)
+        self.groupBox.setMinimumSize(QtCore.QSize(800, 130))
         self.groupBox.setTitle("")
         self.groupBox.setFlat(False)
         self.groupBox.setObjectName("groupBox")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.groupBox)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 651, 91))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 781, 101))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_2 = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame_2.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -90,6 +97,9 @@ class Ui_MainWindow(object):
         self.chbxActive.setObjectName("chbxActive")
         self.horizontalLayout.addWidget(self.frame_2)
         self.frame = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setLineWidth(2)
@@ -103,21 +113,38 @@ class Ui_MainWindow(object):
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.lblDescription = QtWidgets.QLabel(self.frame)
-        self.lblDescription.setGeometry(QtCore.QRect(16, 30, 301, 31))
+        self.lblDescription.setGeometry(QtCore.QRect(16, 30, 351, 31))
         self.lblDescription.setText("")
         self.lblDescription.setObjectName("lblDescription")
         self.horizontalLayout.addWidget(self.frame)
-        self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(30, 190, 821, 181))
+        self.horizontalLayout_2.addWidget(self.groupBox, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.verticalLayout_3.addWidget(self.frame_3)
+        self.frame_5 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_5.setMinimumSize(QtCore.QSize(800, 200))
+        self.frame_5.setMaximumSize(QtCore.QSize(1024, 200))
+        self.frame_5.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.groupBox_2 = QtWidgets.QGroupBox(self.frame_5)
+        self.groupBox_2.setMinimumSize(QtCore.QSize(800, 170))
+        self.groupBox_2.setMaximumSize(QtCore.QSize(1024, 170))
         self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.frmDays = QtWidgets.QFrame(self.groupBox_2)
-        self.frmDays.setGeometry(QtCore.QRect(10, 20, 291, 141))
+        self.frmDays.setGeometry(QtCore.QRect(10, 20, 311, 141))
+        self.frmDays.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frmDays.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frmDays.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmDays.setObjectName("frmDays")
         self.tblDays = QtWidgets.QTableWidget(self.frmDays)
-        self.tblDays.setGeometry(QtCore.QRect(0, 10, 291, 131))
+        self.tblDays.setGeometry(QtCore.QRect(10, 10, 291, 121))
         self.tblDays.setAlternatingRowColors(True)
         self.tblDays.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tblDays.setShowGrid(False)
@@ -148,12 +175,15 @@ class Ui_MainWindow(object):
         self.tblDays.horizontalHeader().setCascadingSectionResizes(True)
         self.tblDays.horizontalHeader().setDefaultSectionSize(65)
         self.frmSlots = QtWidgets.QFrame(self.groupBox_2)
-        self.frmSlots.setGeometry(QtCore.QRect(310, 20, 501, 141))
+        self.frmSlots.setGeometry(QtCore.QRect(330, 20, 481, 141))
+        self.frmSlots.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
         self.frmSlots.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frmSlots.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmSlots.setObjectName("frmSlots")
         self.tblSlot = QtWidgets.QTableWidget(self.frmSlots)
-        self.tblSlot.setGeometry(QtCore.QRect(10, 10, 551, 131))
+        self.tblSlot.setGeometry(QtCore.QRect(10, 0, 451, 131))
         self.tblSlot.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.tblSlot.setDragEnabled(True)
         self.tblSlot.setDragDropMode(QtWidgets.QAbstractItemView.DragDrop)
@@ -201,6 +231,43 @@ class Ui_MainWindow(object):
         item.setFont(font)
         self.tblSlot.setHorizontalHeaderItem(4, item)
         self.tblSlot.horizontalHeader().setDefaultSectionSize(82)
+        self.horizontalLayout_3.addWidget(self.groupBox_2, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.verticalLayout_3.addWidget(self.frame_5)
+        self.frame_6 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_6.setMinimumSize(QtCore.QSize(800, 60))
+        self.frame_6.setMaximumSize(QtCore.QSize(1024, 60))
+        self.frame_6.setStyleSheet("QFrame{\n"
+"    border: none;\n"
+"}")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.btnBack = QtWidgets.QPushButton(self.frame_6)
+        self.btnBack.setMinimumSize(QtCore.QSize(80, 40))
+        self.btnBack.setMaximumSize(QtCore.QSize(80, 40))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btnBack.setFont(font)
+        self.btnBack.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnBack.setStyleSheet("QPushButton{\n"
+"    background-color:rgb(0, 209, 255);\n"
+"    border: none;\n"
+"    border-radius: 10px;\n"
+"    color: white;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"    background-color:rgb(0, 170, 255);\n"
+"    border-radius: 10px\n"
+"}")
+        self.btnBack.setObjectName("btnBack")
+        self.verticalLayout_2.addWidget(self.btnBack, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.verticalLayout_3.addWidget(self.frame_6)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -215,7 +282,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Schedule Details"))
         self.label.setText(_translate("MainWindow", "SCHEDULE DETAILS"))
-        self.btnBack.setText(_translate("MainWindow", "BACK"))
         self.label_2.setText(_translate("MainWindow", "Title"))
         self.chbxActive.setText(_translate("MainWindow", "Active"))
         self.label_3.setText(_translate("MainWindow", "Description"))
@@ -236,6 +302,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Status"))
         item = self.tblSlot.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Action"))
+        self.btnBack.setText(_translate("MainWindow", "BACK"))
 
 
 if __name__ == "__main__":

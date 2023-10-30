@@ -58,8 +58,9 @@ class UI():
         
     def loadLoginForm(self):
         self.accessToken = ""
-        self.mainUI.hide()
         self.loginUI.show()
+        self.mainUI.close()
+        
         
 ## End UI class
 
