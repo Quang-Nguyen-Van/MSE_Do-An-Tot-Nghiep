@@ -14,12 +14,14 @@ from PyQt5.QtCore import Qt
 class Ui_Login(object):
     def setupUi(self, Login):
         Login.setObjectName("Login")
-        Login.resize(800, 480)
+        # Login.resize(800, 480)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Login.sizePolicy().hasHeightForWidth())
         Login.setSizePolicy(sizePolicy)
+        Login.setMinimumSize(QtCore.QSize(800, 480))
+        Login.setMaximumSize(QtCore.QSize(1024, 800))
         self.widget = QtWidgets.QWidget(Login)
         self.widget.setGeometry(QtCore.QRect(140, 10, 550, 451))
         self.widget.setStyleSheet("QPushButton#btnLogin{\n"
@@ -143,10 +145,8 @@ class Ui_Login(object):
         self.label_8.setFont(font)
         self.label_8.setStyleSheet("color:rgba(255, 255, 255, 170);")
         self.label_8.setObjectName("label_8")
-        # Login.showMaximized()
         Login.showFullScreen()
         # Login.setWindowFlag(Qt.FramelessWindowHint)
-
         self.retranslateUi(Login)
         QtCore.QMetaObject.connectSlotsByName(Login)
 
@@ -159,7 +159,7 @@ class Ui_Login(object):
         self.btnLogin.setText(_translate("Login", "L o g  I n"))
         self.label_7.setText(_translate("Login", "Irrigation"))
         self.label_8.setText(_translate("Login", "Schedule"))
-import res
+import res_rc
 
 
 if __name__ == "__main__":

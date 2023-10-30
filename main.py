@@ -16,12 +16,27 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(800, 480)        
+        # MainWindow.resize(1024, 800)
+        MainWindow.setMinimumSize(QtCore.QSize(800, 480))
+        MainWindow.setMaximumSize(QtCore.QSize(1024, 800))
         MainWindow.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(400, 10, 231, 31))
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.frame_2 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.frame_4 = QtWidgets.QFrame(self.frame_2)
+        self.frame_4.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.label = QtWidgets.QLabel(self.frame_4)
+        self.label.setGeometry(QtCore.QRect(20, 20, 208, 23))
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -29,38 +44,29 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.btnLogout = QtWidgets.QPushButton(self.centralwidget)
-        self.btnLogout.setGeometry(QtCore.QRect(920, 520, 81, 41))
-        font = QtGui.QFont()
-        font.setPointSize(8)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btnLogout.setFont(font)
-        self.btnLogout.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnLogout.setStyleSheet("QPushButton{\n"
-"    background-color:rgb(0, 209, 255);\n"
-"    border: none;\n"
-"    border-radius: 10px;\n"
-"    color: white;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QPushButton::hover{\n"
-"    background-color:rgb(0, 170, 255);\n"
-"    border-radius: 10px\n"
-"}")
-        self.btnLogout.setObjectName("btnLogout")
-        self.lbUser = QtWidgets.QLabel(self.centralwidget)
-        self.lbUser.setGeometry(QtCore.QRect(920, 10, 81, 21))
+        self.horizontalLayout.addWidget(self.frame_4, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.frame_5 = QtWidgets.QFrame(self.frame_2)
+        self.frame_5.setMinimumSize(QtCore.QSize(100, 30))
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.lbUser = QtWidgets.QLabel(self.frame_5)
+        self.lbUser.setGeometry(QtCore.QRect(20, 10, 64, 16))
         self.lbUser.setObjectName("lbUser")
+        self.horizontalLayout.addWidget(self.frame_5, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.verticalLayout_2.addWidget(self.frame_2)
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(50, 100, 881, 211))
+        self.frame.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 300))
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.tblSchedule = QtWidgets.QTableWidget(self.frame)
         self.tblSchedule.setEnabled(True)
-        self.tblSchedule.setGeometry(QtCore.QRect(10, 10, 861, 181))
+        self.tblSchedule.setMinimumSize(QtCore.QSize(0, 100))
+        self.tblSchedule.setMaximumSize(QtCore.QSize(16777215, 300))
         self.tblSchedule.setMouseTracking(True)
         self.tblSchedule.setTabletTracking(True)
         self.tblSchedule.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -139,13 +145,42 @@ class Ui_MainWindow(object):
         self.tblSchedule.horizontalHeader().setStretchLastSection(True)
         self.tblSchedule.verticalHeader().setVisible(False)
         self.tblSchedule.verticalHeader().setMinimumSectionSize(24)
+        self.verticalLayout.addWidget(self.tblSchedule)
+        self.verticalLayout_2.addWidget(self.frame)
+        self.frame_3 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_3.setMinimumSize(QtCore.QSize(50, 50))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.btnLogout = QtWidgets.QPushButton(self.frame_3)
+        self.btnLogout.setMinimumSize(QtCore.QSize(80, 40))
+        self.btnLogout.setMaximumSize(QtCore.QSize(80, 40))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btnLogout.setFont(font)
+        self.btnLogout.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnLogout.setStyleSheet("QPushButton{\n"
+"    background-color:rgb(0, 209, 255);\n"
+"    border: none;\n"
+"    border-radius: 10px;\n"
+"    color: white;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QPushButton::hover{\n"
+"    background-color:rgb(0, 170, 255);\n"
+"    border-radius: 10px\n"
+"}")
+        self.btnLogout.setObjectName("btnLogout")
+        self.horizontalLayout_3.addWidget(self.btnLogout)
+        self.verticalLayout_2.addWidget(self.frame_3)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
         MainWindow.showFullScreen()
-        # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
-
+        # Login.setWindowFlag(Qt.FramelessWindowHint)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -153,7 +188,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "IRRIGATION SYSTEM"))
-        self.btnLogout.setText(_translate("MainWindow", "LOGOUT"))
         self.lbUser.setText(_translate("MainWindow", "User Account"))
         item = self.tblSchedule.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "ID"))
@@ -165,6 +199,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Active"))
         item = self.tblSchedule.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Actions"))
+        self.btnLogout.setText(_translate("MainWindow", "LOGOUT"))
 
 
 if __name__ == "__main__":
