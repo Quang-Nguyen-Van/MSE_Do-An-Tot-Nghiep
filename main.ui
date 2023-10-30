@@ -34,19 +34,49 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QFrame" name="frame_2">
+     <widget class="QFrame" name="frm_header">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1024</width>
+        <height>100</height>
+       </size>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item alignment="Qt::AlignRight|Qt::AlignTop">
         <widget class="QFrame" name="frame_4">
          <property name="minimumSize">
           <size>
-           <width>250</width>
+           <width>280</width>
            <height>50</height>
           </size>
          </property>
@@ -56,11 +86,14 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
          <widget class="QLabel" name="label">
           <property name="geometry">
            <rect>
-            <x>20</x>
-            <y>20</y>
+            <x>60</x>
+            <y>10</y>
             <width>208</width>
             <height>23</height>
            </rect>
@@ -95,6 +128,9 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
          <widget class="QLabel" name="lbUser">
           <property name="geometry">
            <rect>
@@ -114,16 +150,16 @@
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="frm_table">
       <property name="minimumSize">
        <size>
-        <width>0</width>
-        <height>100</height>
+        <width>800</width>
+        <height>150</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>16777215</width>
+        <width>1024</width>
         <height>300</height>
        </size>
       </property>
@@ -133,7 +169,25 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QTableWidget" name="tblSchedule">
          <property name="enabled">
@@ -186,6 +240,9 @@ QTableWidget::Item {
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
          <property name="dragDropMode">
           <enum>QAbstractItemView::DragDrop</enum>
          </property>
@@ -208,7 +265,7 @@ QTableWidget::Item {
           <bool>true</bool>
          </property>
          <property name="rowCount">
-          <number>10</number>
+          <number>5</number>
          </property>
          <property name="columnCount">
           <number>5</number>
@@ -228,11 +285,6 @@ QTableWidget::Item {
          <attribute name="verticalHeaderMinimumSectionSize">
           <number>24</number>
          </attribute>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
          <row/>
          <row/>
          <row/>
@@ -319,11 +371,17 @@ QTableWidget::Item {
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame_3">
+     <widget class="QFrame" name="frm_button">
       <property name="minimumSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>800</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1024</width>
+        <height>100</height>
        </size>
       </property>
       <property name="frameShape">
@@ -332,7 +390,25 @@ QTableWidget::Item {
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QPushButton" name="btnLogout">
          <property name="minimumSize">
