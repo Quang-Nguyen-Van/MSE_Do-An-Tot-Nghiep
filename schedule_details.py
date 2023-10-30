@@ -32,6 +32,8 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frame_4)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(self.frame_4)
         font = QtGui.QFont()
@@ -45,6 +47,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.frame_4)
         self.frame_3 = QtWidgets.QFrame(self.centralwidget)
         self.frame_3.setMinimumSize(QtCore.QSize(800, 130))
+        self.frame_3.setMaximumSize(QtCore.QSize(1024, 140))
         self.frame_3.setStyleSheet("QFrame{\n"
 "    border: none;\n"
 "}")
@@ -54,7 +57,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_3)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.groupBox = QtWidgets.QGroupBox(self.frame_3)
-        self.groupBox.setMinimumSize(QtCore.QSize(800, 130))
+        self.groupBox.setMinimumSize(QtCore.QSize(790, 125))
+        self.groupBox.setMaximumSize(QtCore.QSize(1020, 150))
         self.groupBox.setStyleSheet("QGroupBox {\n"
 "    border: 1px solid;\n"
 "}")
@@ -134,8 +138,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_5)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.groupBox_2 = QtWidgets.QGroupBox(self.frame_5)
-        self.groupBox_2.setMinimumSize(QtCore.QSize(800, 170))
-        self.groupBox_2.setMaximumSize(QtCore.QSize(1024, 170))
+        self.groupBox_2.setMinimumSize(QtCore.QSize(790, 170))
+        self.groupBox_2.setMaximumSize(QtCore.QSize(1020, 170))
         self.groupBox_2.setStyleSheet("QGroupBox {\n"
 "    border: 1px solid;\n"
 "}")
@@ -286,6 +290,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         MainWindow.showFullScreen()
         # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
+
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 

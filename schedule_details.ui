@@ -56,6 +56,21 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item alignment="Qt::AlignTop">
         <widget class="QLabel" name="label">
          <property name="font">
@@ -84,6 +99,12 @@
         <height>130</height>
        </size>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>1024</width>
+        <height>140</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">QFrame{
 	border: none;
@@ -100,8 +121,14 @@
         <widget class="QGroupBox" name="groupBox">
          <property name="minimumSize">
           <size>
-           <width>800</width>
-           <height>130</height>
+           <width>790</width>
+           <height>125</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1020</width>
+           <height>150</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -293,13 +320,13 @@
         <widget class="QGroupBox" name="groupBox_2">
          <property name="minimumSize">
           <size>
-           <width>800</width>
+           <width>790</width>
            <height>170</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>1024</width>
+           <width>1020</width>
            <height>170</height>
           </size>
          </property>
