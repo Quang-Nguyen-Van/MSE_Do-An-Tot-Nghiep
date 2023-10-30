@@ -159,7 +159,7 @@ class Ui_Login(object):
         self.btnLogin.setText(_translate("Login", "L o g  I n"))
         self.label_7.setText(_translate("Login", "Irrigation"))
         self.label_8.setText(_translate("Login", "Schedule"))
-import res_rc
+import res
 
 
 if __name__ == "__main__":
