@@ -148,7 +148,7 @@ class Ui_MainWindow(object):
         self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.frmDays = QtWidgets.QFrame(self.groupBox_2)
-        self.frmDays.setGeometry(QtCore.QRect(10, 20, 241, 141))
+        self.frmDays.setGeometry(QtCore.QRect(10, 10, 261, 151))
         self.frmDays.setStyleSheet("QFrame{\n"
 "    border: none;\n"
 "}")
@@ -156,7 +156,7 @@ class Ui_MainWindow(object):
         self.frmDays.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmDays.setObjectName("frmDays")
         self.tblDays = QtWidgets.QTableWidget(self.frmDays)
-        self.tblDays.setGeometry(QtCore.QRect(10, 10, 221, 121))
+        self.tblDays.setGeometry(QtCore.QRect(0, 0, 251, 151))
         self.tblDays.setStyleSheet("QTableWidget {\n"
 "    border: 1px solid;\n"
 "}")
@@ -190,7 +190,7 @@ class Ui_MainWindow(object):
         self.tblDays.horizontalHeader().setCascadingSectionResizes(True)
         self.tblDays.horizontalHeader().setDefaultSectionSize(65)
         self.frmSlots = QtWidgets.QFrame(self.groupBox_2)
-        self.frmSlots.setGeometry(QtCore.QRect(300, 20, 441, 141))
+        self.frmSlots.setGeometry(QtCore.QRect(280, 10, 481, 151))
         self.frmSlots.setStyleSheet("QFrame{\n"
 "    border: none;\n"
 "}")
@@ -198,7 +198,8 @@ class Ui_MainWindow(object):
         self.frmSlots.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frmSlots.setObjectName("frmSlots")
         self.tblSlot = QtWidgets.QTableWidget(self.frmSlots)
-        self.tblSlot.setGeometry(QtCore.QRect(-10, 0, 451, 131))
+        self.tblSlot.setGeometry(QtCore.QRect(0, 0, 481, 151))
+        self.tblSlot.setMinimumSize(QtCore.QSize(481, 141))
         self.tblSlot.setStyleSheet("QTableWidget {\n"
 "    border: 1px solid;\n"
 "}")
@@ -292,7 +293,6 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         MainWindow.showFullScreen()
         # MainWindow.setWindowFlag(Qt.FramelessWindowHint)
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
