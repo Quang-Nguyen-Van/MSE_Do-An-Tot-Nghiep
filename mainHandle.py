@@ -2,9 +2,19 @@ from main import Ui_MainWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import Qt
-import apiHandle
 from qtwidgets import Toggle
 
+from Utilities import modbus485
+
+import serial as serial
+from Utilities.softwaretimer import *
+from Utilities.modbus485 import *
+import Utilities.modbus485
+from Utilities.togglebutton import *
+# from mqtt import *
+from Utilities.constant import *
+
+import apiHandle
 from schedule_detailsHandle import SCHEDULE_DETAILS_HANDLE
 
 
@@ -184,6 +194,15 @@ class MAIN_HANDLE(Ui_MainWindow):
         stt = 2
         if emitted:
             stt = 1
+            
+        ser = serial.Serial(port="/dev/ttyUSB0", baudrate=9600)            
+        m485 = Utilities.modbus485.Modbus485(ser)
+        print("Button1 is click", stt)
+        if stt == 1:
+            m485.modbus485_send(relay1_ON)
+        else:
+            m485.modbus485_send(relay1_OFF)
+        pass    
         # Retrieve data for the selected row
         slot_id = self.scheduleHandle.tblSlot.item(row, 0).text()
         slot_status = self.scheduleHandle.tblSlot.item(row, 3).text()
