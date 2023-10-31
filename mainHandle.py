@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import Qt
 import apiHandle
+from qtwidgets import Toggle
 
 from schedule_detailsHandle import SCHEDULE_DETAILS_HANDLE
 
@@ -152,40 +153,47 @@ class MAIN_HANDLE(Ui_MainWindow):
                 self.scheduleHandle.tblSlot.setItem(row, 3, item)
                 item.setTextAlignment(Qt.AlignHCenter)
                 
-                button = QtWidgets.QPushButton("Play")                
-                button.setMaximumSize(QtCore.QSize(70, 25))
-                button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-                button.setStyleSheet("QPushButton{\n"
-                                            "    background-color:rgb(0, 209, 255);\n"
-                                            "    border: none;\n"
-                                            "    border-radius: 7px;\n"
-                                            "    color: white;\n"
-                                            "    font-weight: bold;\n"
-                                            "}\n"
-                                            "\n"
-                                            "QPushButton::hover{\n"
-                                            "    background-color:rgb(0, 170, 255);\n"
-                                            "    border-radius: 7px;\n"
-                                            "}")
+                # button = QtWidgets.QPushButton("Play")                
+                # button.setMaximumSize(QtCore.QSize(70, 25))
+                # button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                # button.setStyleSheet("QPushButton{\n"
+                #                             "    background-color:rgb(0, 209, 255);\n"
+                #                             "    border: none;\n"
+                #                             "    border-radius: 7px;\n"
+                #                             "    color: white;\n"
+                #                             "    font-weight: bold;\n"
+                #                             "}\n"
+                #                             "\n"
+                #                             "QPushButton::hover{\n"
+                #                             "    background-color:rgb(0, 170, 255);\n"
+                #                             "    border-radius: 7px;\n"
+                #                             "}")
                 
-                button.clicked.connect(lambda: self.changeSlotStatus())
-                self.scheduleHandle.tblSlot.setCellWidget(row, 4, button)                                
+                # button.clicked.connect(lambda: self.changeSlotStatus())
                 
-    def changeSlotStatus(self):
+                toggle = Toggle()
+                toggle.clicked.connect(self.changeSlotStatus)
+                
+                self.scheduleHandle.tblSlot.setCellWidget(row, 4, toggle)                                
+                
+    def changeSlotStatus(self, emitted):
         # Get the row of the button clicked
         button = self.scheduleHandle.tblSlot.sender()
         row = self.scheduleHandle.tblSlot.indexAt(button.pos()).row()
 
+        stt = 2
+        if emitted:
+            stt = 1
         # Retrieve data for the selected row
         slot_id = self.scheduleHandle.tblSlot.item(row, 0).text()
         slot_status = self.scheduleHandle.tblSlot.item(row, 3).text()
         
-        updated, resp = apiHandle.setSlotStatus(self.accessToken, slot_id, 1)
+        updated, resp = apiHandle.setSlotStatus(self.accessToken, slot_id, stt)
         if updated:
             print(resp)
             statusStr = 'Cancel'
             if resp['status'] == 1:
-                statusStr = "Active"
+                statusStr = "Running"
             elif resp['status'] == 2:
                 statusStr = "Done"
             self.scheduleHandle.tblSlot.item(row, 3).setText(statusStr)
